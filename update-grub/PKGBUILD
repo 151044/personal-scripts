@@ -1,0 +1,14 @@
+pkgname=('update-grub')
+pkgver='1'
+pkgrel=1
+pkgdesc="Small symlink for updating grub."
+url="https://nopersonalinfo.freemyip.com"
+arch=('any')
+license=('GPL')
+depends=('grub')
+makedepends=('git')
+source=("$pkgname::git+https://github.com/151044/personal-scripts.git")
+sha512sums=('SKIP')
+package() {
+    install -Dm644 $pkgname/update-grub/update-grub.sh "$pkgdir/usr/bin/update-grub"
+}
