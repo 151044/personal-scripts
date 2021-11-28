@@ -1,4 +1,6 @@
-pkgname=('update-grub')
+pkgname=('update-grub-local')
+conflicts=('update-grub')
+provides=('update-grub')
 pkgver='1'
 pkgrel=1
 pkgdesc="Small symlink for updating grub."
