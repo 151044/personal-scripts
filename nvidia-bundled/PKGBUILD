@@ -11,6 +11,7 @@ depends=('nvidia-dkms' 'nvtop' 'nvidia-utils' 'optimus-manager' 'optimus-manager
 source=("$pkgname::git+https://github.com/151044/personal-scripts.git")
 sha512sums=('SKIP')
 package() {
-    install -Dm755 $pkgname/nv_run.sh "$pkgdir/usr/bin/nv_run"
-    install -Dm755 $pkgname/nv_gamemoderun.sh "$pkgdir/usr/bin/nv_gamemoderun"
+    pwd
+    install -Dm755 "$pkgname/nvidia_bundled/nv_run.sh" "$pkgdir/usr/bin/nv_run"
+    install -Dm755 "$pkgname/nvidia_bundled/nv_gamemoderun.sh" "$pkgdir/usr/bin/nv_gamemoderun"
 }
