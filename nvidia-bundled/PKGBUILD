@@ -1,0 +1,16 @@
+pkgname=('nvidia-bundled')
+conflicts=('nvidia')
+pkgver='2'
+pkgrel=1
+pkgdesc="Small symlink for updating grub."
+url="https://nopersonalinfo.freemyip.com"
+arch=('any')
+license=('GPL')
+makedepends=('git')
+depends=('nvidia-dkms' 'nvtop' 'nvidia-utils' 'optimus-manager' 'optimus-manager-qt' 'lib32-nvidia-utils')
+source=("$pkgname::git+https://github.com/151044/personal-scripts.git")
+sha512sums=('SKIP')
+package() {
+    install -Dm755 $pkgname/nv_run.sh "$pkgdir/usr/bin/nv_run"
+    install -Dm755 $pkgname/nv_gamemoderun.sh "$pkgdir/usr/bin/nv_gamemoderun"
+}
