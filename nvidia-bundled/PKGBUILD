@@ -1,8 +1,7 @@
 pkgname=('nvidia-bundled')
-conflicts=('nvidia')
 pkgver='2'
 pkgrel=1
-pkgdesc="Small symlink for updating grub."
+pkgdesc="Nvidia package group."
 url="https://nopersonalinfo.freemyip.com"
 arch=('any')
 license=('GPL')
